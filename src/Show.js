@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import firebase from './firebase';
 
 export default function Show() {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
   function pushFire() {
-    
+    try{
+      firebase.database().ref('/crud').push({
+        name: name,
+        age: age
+      })
+    } catch(error) {
+      alert(error);
+    }
+    finally {
+      setName('');
+      setAge('');
+    }
   }
 
   return (
@@ -28,8 +40,6 @@ export default function Show() {
       <TouchableOpacity style={styles.button} onPress={pushFire}>
         <Text style={styles.buttonText}>SEND</Text>
       </TouchableOpacity>
-
-      <Text style={styles.buttonText}>{name} {age}</Text>
     </View>
   );
 }
