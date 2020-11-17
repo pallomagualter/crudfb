@@ -1,0 +1,12 @@
+{
+  "name": "crudfb",
+  "displayName": "crudfb",
+  "expo": {
+    "name": "crudfb",
+    "slug": "expo-template-bare",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
