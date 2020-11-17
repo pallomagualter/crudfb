@@ -1,5 +1,5 @@
 <h1 align="center">
-   Crud with Firebase
+   CRUD with Firebase
 </h1>
 
 <p align="center">
