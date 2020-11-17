@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 export default function Show() {
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+
+  function pushFire() {
+    
+  }
+
   return (
     <View style={styles.container}>
       <TextInput 
         style={styles.input}
         placeholder="Type your name"
+        value={name}
+        onChangeText={name => setName(name)}
       />
 
       <TextInput 
         style={styles.input}
         placeholder="Type your age"
+        value={age}
+        onChangeText={age => setAge(age)}
       />
       
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={pushFire}>
         <Text style={styles.buttonText}>SEND</Text>
       </TouchableOpacity>
+
+      <Text style={styles.buttonText}>{name} {age}</Text>
     </View>
   );
 }
@@ -38,6 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 20,
     marginBottom: 10,
+    textAlign: 'center',
   },
   button: {
     height: 45,
@@ -47,6 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 20,
   },
   buttonText: {
     color: '#fff',
