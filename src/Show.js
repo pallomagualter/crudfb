@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
-      //padding: 20,
     },
     text: {
         color: '#fff',
@@ -29,11 +28,6 @@ const styles = StyleSheet.create({
       borderRadius: 10, 
       textAlign: 'center',
       marginTop: 5,
-      //alignSelf: 'stretch',
-      //borderColor: '#EEE',
-      //borderWidth: 1,
-      //paddingHorizontal: 20,
-      //marginBottom: 10,
     },
     button: {
       height: 50,
