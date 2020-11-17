@@ -41,13 +41,13 @@ Este projeto tem como único intuito estudar a integração React Native/firebas
 $  git clone https://github.com/pallomagualter/crudfb.git
 
 #Acesse o diretório mobile
-$ cd mobile
+$ cd crudfb
 
 #Instale as dependências
 $ yarn 
 
 # Inicie a aplicação
-$ yarn start
+$ expo start
 ```
 
 ## :memo: Licença
