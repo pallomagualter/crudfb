@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Show() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Firebase!</Text>
+      <Text style={styles.text}>AGORA VOCÊ ME VER!</Text>
     </View>
 
   );

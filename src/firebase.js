@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyB_4WYpxKvFc0-b8UCC5wrK3BMBX8HLw4U",
     authDomain: "crudfb-4b242.firebaseapp.com",
     databaseURL: "https://crudfb-4b242.firebaseio.com",
