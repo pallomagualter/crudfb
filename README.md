@@ -10,7 +10,6 @@
   <a href="#-layout">Desenvolvimento</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
-
 <h1 align="center">
   <img alt="Crud" title="Crud Firebase" src="https://github.com/pallomagualter/crudfb/blob/main/src/assets/crud.png" />
   <br />
@@ -30,6 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Este projeto tem como único intuito estudar a integração React Native/firebase  💜
 
 <br />
+
 <b>Funcionalidades da API: </b>
  - Salva nome e idade no banco;
  - Lista nome e idade;
