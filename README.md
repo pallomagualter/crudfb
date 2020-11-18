@@ -18,7 +18,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
-- [TypeScript](https://www.typescriptlang.org/)
 
 ## 💻 Projeto
 
@@ -26,7 +25,10 @@ Este projeto tem como único intuito estudar a integração React Native/firebas
 
 <br /><br />
 <b>Funcionalidades da API: </b>
- - ainda em processo de criação ...
+ - Salva nome e idade no banco;
+ - Lista nome e idade;
+ - Edição de dados;
+ - Exclusão de dados;
 
 ## 🔖 Layout
 
