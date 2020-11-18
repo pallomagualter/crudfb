@@ -31,10 +31,10 @@ Este projeto tem como único intuito estudar a integração React Native/firebas
 <br />
 
 <b>Funcionalidades da API: </b>
- - Salva nome e idade no banco;
- - Lista nome e idade;
- - Edição de dados;
- - Exclusão de dados;
+ - Salva nome e idade no banco
+ - Lista nome e idade
+ - Edição de dados
+ - Exclusão de dados
 
 ## 🔖 Layout
 
