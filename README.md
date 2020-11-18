@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Este projeto tem como único intuito estudar a integração React Native/firebase  💜
 
-<br /><br />
+<br />
 <b>Funcionalidades da API: </b>
  - Salva nome e idade no banco;
  - Lista nome e idade;
