@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList, ScrollView } from 'react-native';
 import firebase from './firebase';
 
 export default function Show() {
@@ -59,7 +59,31 @@ export default function Show() {
       <TouchableOpacity style={styles.button} onPress={pushFire}>
         <Text style={styles.buttonText}>SEND</Text>
       </TouchableOpacity>
+
+      <ScrollView>
+        <FlatList 
+          style={styles.viewFlatlist}
+          data={listFire}
+          keyExtractor={(item) => item.key}
+          renderItem={({item}) => 
+
+            <View style={styles.iconFlat}> 
+              <Text style={styles.text} >Nome: {item.name} </Text>
+              <Text style={styles.text} >Idade: {item.age} </Text>
+
+              <TouchableOpacity style={styles.btnEdit} onPress={() => { editFire(item.key, item.name, item.age) }} >
+                <Text style={styles.text}>EDIT</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.btnDelete} onPress={() => { delFire(item.key) }}>
+                <Text style={styles.text}>DELETE</Text>
+              </TouchableOpacity>
+            </View>
+          }
+        />
+      </ScrollView>
     </View>
+
   );
 }
 
@@ -70,6 +94,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+  },
+  text: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '700',
   },
   input: {
     height: 45,
@@ -92,9 +121,44 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
+  btnEdit: {
+    height: 45,
+    backgroundColor: '#04d361',
+    alignSelf: 'stretch',
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  btnDelete: {
+    height: 45,
+    backgroundColor: 'red',
+    alignSelf: 'stretch',
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 20,
   },
+  iconFlat: {
+    flexDirection: 'row',
+    width: 350,
+    height: 50,
+    borderColor: '#fff',
+    borderWidth: 1,
+    borderRadius: 5,
+    alignItems: 'center',
+    alignContent: 'flex-start',
+    justifyContent: 'center',
+    margin: 5
+  },
+  viewFlat: {
+    maxHeight: 410,
+  }
   });
