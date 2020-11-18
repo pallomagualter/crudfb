@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
 import firebase from './firebase';
 
 export default function Show() {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
+  const [listFire, setListFire] = useState('');
 
   function pushFire() {
     try{
@@ -20,6 +21,24 @@ export default function Show() {
       setAge('');
     }
   }
+
+  useEffect(() => {
+    try{
+      firebase.database().ref('/crud').on('value', (snapshot) => {
+        const list = [];
+        snapshot.forEach(childItem => {
+          list.push({
+            key: childItem.key,
+            name: childItem.val().name,
+            age: childItem.val().age
+          })
+        });
+        setListFire(list);
+      })
+    } catch (error)  {
+      alert(error);
+    }
+  }, [])
 
   return (
     <View style={styles.container}>
