@@ -1,7 +1,6 @@
 <h1 align="center">
-  <img alt="Crud" title="Crud Firebase" src="https://github.com/pallomagualter/crudfb/blob/main/src/assets/crud.png" />
-  <br />
   CRUD with Firebase 
+  <br />
 </h1>
 
 <p align="center">
@@ -11,6 +10,11 @@
   <a href="#-layout">Desenvolvimento</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
+
+<h1 align="center">
+  <img alt="Crud" title="Crud Firebase" src="https://github.com/pallomagualter/crudfb/blob/main/src/assets/crud.png" />
+  <br />
+</h1>
 
 ## 🚀 Tecnologias
 
